@@ -98,7 +98,32 @@
 
 
 // N8
+{
+    const pupils = [
+        { name: "Elbek", protcent: 95 },
+        { name: "Zafar", protcent: 78 },
+        { name: "Aziz", protcent: 83 },
+        { name: "Jasur", protcent: 88 },
+        { name: "Bobur", protcent: 66 },
+        { name: "Kamron", protcent: 75 }
+    ];
 
+    const result = pupils.reduce(
+        (acc, pupil) => {
+            if (pupil.protcent >= 80) {
+                acc.passed += 1;
+            } else {
+                acc.failed += 1;
+            }
+            return acc;
+        },
+        { passed: 0, failed: 0 }
+    );
+
+    console.log(`Imtihondan o'tganlar soni: ${result.passed}`);
+    console.log(`Imtihondan o'tmaganlar soni: ${result.failed}`);
+
+}
 
 
 // N9
